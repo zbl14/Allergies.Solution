@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AllergiesList.Modles;
 
-namespace AllergiesList.Modles.Tests
+namespace AllergiesList.Tests
 {
  [TestClass]
  public class AllergiesTests
