@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Allergies.Modles
+namespace AllergiesList.Modles
 {
   public class Allergies
   {

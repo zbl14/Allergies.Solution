@@ -1,5 +1,5 @@
 using System;
-using Allergies.Modles;
+using AllergiesList.Modles;
 
 namespace AllergiesList
 {
@@ -9,7 +9,7 @@ namespace AllergiesList
    {
     Console.WriteLine("What is your score of the allergies test?");
     int score = int.Parse(Console.ReadLine());
-    Console.WriteLine(Allergies.Modles.Allergies.GetAllergens(score));
+    Console.WriteLine(Allergies.GetAllergens(score));
    }
   }
 }
