@@ -1,14 +1,16 @@
-// using System;
-// using Allergies.Modles;
+using System;
+using Allergies.Modles;
 
-// namespace AllergiesList
-// {
-//   public class Program
-//   {
-//    public static void Main() 
-//    {
-
-//    }
-//   }
-// }
+namespace AllergiesList
+{
+  public class Program
+  {
+   public static void Main() 
+   {
+    Console.WriteLine("What is your score of the allergies test?");
+    int score = int.Parse(Console.ReadLine());
+    Console.WriteLine(Allergies.Modles.Allergies.GetAllergens(score));
+   }
+  }
+}
 
