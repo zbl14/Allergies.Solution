@@ -18,5 +18,11 @@ namespace Allergies.Tests
     int score = 3;
     Assert.AreEqual("eggs, peanuts", Allergies.GetAllergens(score));
   }
+  [TestMethod]
+  public void AllergiesTests_GetAllergens_EggsStrawerries()
+  {
+    int score = 9;
+    Assert.AreEqual("eggs, strawerries", Allergies.GetAllergens(score));
+  }
  }
 }
