@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Allergies;
+using Allergies.Modles;
 
 namespace Allergies.Tests
 {
@@ -10,25 +10,25 @@ namespace Allergies.Tests
   public void AllergiesTests_GetAllergens_Eggs()
   {
     int score = 1;
-    Assert.AreEqual("eggs", Allergies.GetAllergens(score));
+    Assert.AreEqual("eggs", Allergies.Modles.Allergies.GetAllergens(score));
   }
   [TestMethod]
   public void AllergiesTests_GetAllergens_EggsPeanuts()
   {
     int score = 3;
-    Assert.AreEqual("eggs, peanuts", Allergies.GetAllergens(score));
+    Assert.AreEqual("eggs, peanuts", Allergies.Modles.Allergies.GetAllergens(score));
   }
   [TestMethod]
   public void AllergiesTests_GetAllergens_EggsStrawerries()
   {
     int score = 9;
-    Assert.AreEqual("eggs, strawerries", Allergies.GetAllergens(score));
+    Assert.AreEqual("eggs, strawerries", Allergies.Modles.Allergies.GetAllergens(score));
   }
   [TestMethod]
   public void AllergiesTests_GetAllergens_False()
   {
     int score = 257;
-    Assert.AreEqual("false", Allergies.GetAllergens(score));
+    Assert.AreEqual("false", Allergies.Modles.Allergies.GetAllergens(score));
   }
  }
 }
