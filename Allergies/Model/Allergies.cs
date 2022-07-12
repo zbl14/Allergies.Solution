@@ -29,23 +29,30 @@ namespace Allergies
       int indice = score;
       string wantedallergen = "";  
       List<string> listOfResult = new List<string>(0);
-      while(indice >= 1)
+      if ( indice > 256) 
       {
-        int min = 0;
-        int wanted = 0;
-        foreach(Allergies allergen in ListOfAllergies)
+        return "false";
+      } 
+      else
+      {
+        while(indice >= 1)
         {
-          if(allergen.Score > min && allergen.Score <= indice)
+          int min = 0;
+          int wanted = 0;
+          foreach(Allergies allergen in ListOfAllergies)
           {
-            wanted = allergen.Score;
-            min = allergen.Score;
-            wantedallergen = allergen.Allergen;
+            if(allergen.Score > min && allergen.Score <= indice)
+            {
+              wanted = allergen.Score;
+              min = allergen.Score;
+              wantedallergen = allergen.Allergen;
+            }
           }
+          listOfResult.Insert(0, wantedallergen);
+          indice -= wanted;
         }
-        listOfResult.Insert(0, wantedallergen);
-        indice -= wanted;
+        return String.Join(", ", listOfResult);
       }
-      return String.Join(", ", listOfResult);
     }
   }
 }
